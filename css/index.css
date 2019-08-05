@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #030303;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body button {
+  background-color: transparent;
+  color: white;
+  padding: 1em 2em;
+  border: 1px solid white;
+  border-radius: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1em;
+  position: relative;
+}
+
+body button::before {
+  content: "";
+  width: 4%;
+  height: 100%;
+  background-color: rgba(199, 23, 23, 0.582);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+}
+
+body button:hover::before {
+  background-color: white;
+  width: 50%;
+  right: 0;
+}
+
+body header {
+  display: -ms-grid;
+  display: grid;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0.5em 0;
+  background-color: #030303;
+  -ms-grid-columns: 30% 1fr;
+      grid-template-columns: 30% 1fr;
+}
+
+body header .logo {
+  background: url("../assets/magsManLogo.png");
+  -webkit-transform: scale(6);
+          transform: scale(6);
+  background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+  background-position: center;
+  text-align: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0.5em 0;
+}
+
+body header nav {
+  text-align: right;
+  padding: 1em 0;
+}
+
+body header nav ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (13.3%)[3];
+      grid-template-columns: repeat(3, 13.3%);
+  grid-column-gap: 2em;
+  text-align: right;
+  text-decoration: none;
+}
+
+body header nav ul li {
+  list-style: none;
+  position: relative;
+}
+
+body header nav ul li ::before {
+  width: 30%;
+  height: 9%;
+  bottom: -12%;
+  background-color: white;
+  display: block;
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.61s ease-in-out;
+  transition: all 0.61s ease-in-out;
+}
+
+body header nav ul li :hover::before {
+  width: 50%;
+  height: 15%;
+  bottom: -12%;
+  background-color: white;
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+body header nav ul a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+body main .showcase {
+  margin: 8em 0;
+  position: relative;
+  padding: 4em 1em;
+}
+
+body main .showcase::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  background: url("../assets/magsManLeaves.svg");
+  background-position-x: 98%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body main .showcase h1 {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 3em;
+  margin-bottom: 0.4em;
+}
+
+body main .showcase p {
+  color: white;
+  width: 60%;
+  margin-bottom: 2em;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    // overflow: hidden;
+}
+body{
+
+    // CSS componet styles
+    button{
+        background-color: transparent;
+        color: white;
+        padding: 1em 2em;
+        border: 1px solid white;
+        border-radius: 6px;
+        font-family: 'Courier New', Courier, monospace; 
+        font-size: 1.1em;
+        position: relative;
+
+
+        &::before{
+            content: "";
+            width: 4%;
+            height: 100%;
+            background-color: rgba(199, 23, 23, 0.582);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 6px;
+        }
+
+        &:hover::before{
+           background-color: white;
+           width: 50%;
+           right: 0;
+        }
+    }
+
+
+
+    background-color: rgb(3, 3, 3);
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: lighter;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+    // Desktop View;
+    header{
+        display: grid;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0.5em 0;
+        background-color: rgb(3, 3, 3);
+        grid-template-columns: 30% 1fr;
+
+            .logo{
+                background: url("../assets/magsManLogo.png");
+                transform: scale(6);
+                background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+                background-position: center;
+                text-align: left;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: block;
+                margin: 0.5em 0;
+
+                
+            }
+            
+            nav{
+                text-align: right;
+                padding: 1em 0;
+                ul{
+                    display: grid;
+                    grid-template-columns: repeat(3, 13.3%);
+                    grid-column-gap: 2em;
+                    text-align: right;
+                    text-decoration: none;
+
+                    li{
+                        list-style: none;
+                        position: relative;
+
+                            ::before{
+                                width: 30%;
+                                height: 9%;
+                                bottom: -12%;
+                                background-color: white;
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                transition: all 0.61s ease-in-out;
+                            }
+
+                            :hover::before{
+                                width: 50%;
+                                height: 15%;
+                                bottom: -12%;
+                                background-color: white;
+                                display: block;
+                                content: "";
+                                position: absolute;
+                            }
+
+                          
+                    }
+
+                    a{
+                        color: white;
+                        display: inline-block;
+                        text-decoration: none;
+
+                            
+                    }
+                }
+                
+
+            }
+    }
+
+
+    main{
+        .showcase{
+            margin: 8em 0;
+            position: relative;
+           
+            padding: 4em 1em ;
+
+            &::before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: inline-block;
+                background: url("../assets/magsManLeaves.svg");
+                background-position-x: 98%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: scale(1)
+
+            }
+            
+            h1{
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 600;
+                font-size: 3em;
+                margin-bottom: 0.4em
+                
+               
+            }
+
+            p{
+                color: white;
+                width: 60%;
+                margin-bottom: 2em;
+                line-height: 1.4em;
+                font-size: 1.2em;
+            }
+
+            
+
+         
+        }
+    }
+
+
+}
