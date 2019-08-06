@@ -5,7 +5,7 @@
 
 body {
   background-color: #030303;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: lighter;
   position: relative;
   overflow-y: auto;
@@ -16,29 +16,37 @@ body button {
   background-color: transparent;
   color: white;
   padding: 1em 2em;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 6px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.1em;
   position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
-body button::before {
-  content: "";
-  width: 4%;
-  height: 100%;
-  background-color: rgba(199, 23, 23, 0.582);
-  display: block;
+body button:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+body .styleH {
+  font-size: 2.6em;
+  position: relative;
+  margin-bottom: 0.5em;
+  width: 30%;
+}
+
+body .styleH::before {
   position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 6px;
-}
-
-body button:hover::before {
-  background-color: white;
-  width: 50%;
+  bottom: 0;
+  content: "";
+  width: 0.1%;
   right: 0;
+  height: 100%;
+  display: block;
+  background-color: white;
 }
 
 body header {
@@ -52,6 +60,7 @@ body header {
   background-color: #030303;
   -ms-grid-columns: 30% 1fr;
       grid-template-columns: 30% 1fr;
+  z-index: 2;
 }
 
 body header .logo {
@@ -115,10 +124,15 @@ body header nav ul a {
   text-decoration: none;
 }
 
+body main {
+  padding: 0em 0em 0em 1em;
+}
+
 body main .showcase {
-  margin: 8em 0;
+  margin: 26vh 0vh 40vh 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   position: relative;
-  padding: 4em 1em;
 }
 
 body main .showcase::before {
@@ -137,9 +151,9 @@ body main .showcase::before {
 
 body main .showcase h1 {
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 600;
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: 0.4em;
 }
 
@@ -148,6 +162,207 @@ body main .showcase p {
   width: 60%;
   margin-bottom: 2em;
   line-height: 1.4em;
+  font-size: 1.5em;
+}
+
+body .who {
+  color: white;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+body .who p {
+  font-size: 1.3em;
+  line-height: 1.8em;
+  width: 70%;
+}
+
+body .contactUs {
+  background-color: white;
+  padding: 9em 0;
+  text-align: center;
+  background-attachment: scroll;
+  position: relative;
+}
+
+body .contactUs::before {
+  content: "";
+  width: 100%;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  display: block;
+  background: url("../assets/map2.png");
+  z-index: -0.2;
+}
+
+body .contactUs h1 {
+  font-size: 3.4em;
+  position: relative;
+  margin-bottom: 0.5em;
+}
+
+body .contactUs h1::before {
+  width: 0.2%;
+  height: 100%;
+  right: 30%;
+  bottom: -12%;
+  background-color: black;
+  display: block;
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.61s ease-in-out;
+  transition: all 0.61s ease-in-out;
+  -webkit-animation: typing infinite 0.5s alternate ease-in-out;
+          animation: typing infinite 0.5s alternate ease-in-out;
+  top: 0;
+}
+
+body .contactUs p {
+  font-size: 1.1em;
+}
+
+body .contactUs button {
+  border: 2px solid black;
+  margin-top: 2em;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+body .clients {
+  color: white;
+  padding: 3em 0;
+  position: relative;
+}
+
+body .clients::before {
+  width: 40%;
+  height: 2px;
+  background-color: white;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+body .clients h1 {
+  font-size: 3em;
+  position: relative;
+  width: 25%;
+  margin-bottom: 1.4em;
+}
+
+body .clients h1::before {
+  width: 0.2%;
+  height: 100%;
+  right: 30%;
+  bottom: -12%;
+  background-color: white;
+  display: block;
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.61s ease-in-out;
+  transition: all 0.61s ease-in-out;
+  top: 0;
+  z-index: -4;
+}
+
+body .clients .clientCard {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.7fr 3fr 2fr;
+      grid-template-columns: 1.7fr 3fr 2fr;
+  width: 90%;
+  grid-column-gap: 1em;
+  margin: 1em auto 9em auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+body .clients .clientCard span {
+  padding: 1em 0em;
+  line-height: 1.1em;
+  width: 70%;
+  margin: 0.5em;
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+body .clients .clientCard span:hover {
+  background-color: white;
+  color: black;
+}
+
+body footer {
+  color: white;
+  padding: 6em 0 1em 1em;
+}
+
+body footer .footerSection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 1fr;
+      grid-template-columns: 60% 1fr;
+}
+
+body footer .footerSection .stayInfo {
+  display: -ms-grid;
+  display: grid;
+  padding-top: 10vh;
+  -ms-grid-columns: 90% 1fr;
+      grid-template-columns: 90% 1fr;
+}
+
+body footer .footerSection .stayInfo input {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 0.9em 1em;
+  border-radius: 5px;
+  width: 70%;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.2em;
+}
+
+body footer .footerSection .footerLogo {
+  text-align: center;
+  height: 30vh;
+  background: url("../assets/magsManLogoText.png");
+  background-size: contain;
+  background-position-x: 40%;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: -1;
+}
+
+body footer p {
+  text-align: center;
+  margin-top: 9em;
+}
+
+@-webkit-keyframes typing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=index.css.map */
