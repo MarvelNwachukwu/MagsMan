@@ -66,7 +66,7 @@ body{
         padding: 0.5em 0;
         background-color: rgb(3, 3, 3);
         grid-template-columns: 30% 1fr;
-        z-index: 2;
+        z-index: 10;
 
             .logo{
                 background: url("../assets/magsManLogo.png");
@@ -130,6 +130,10 @@ body{
                 }
                 
 
+            }
+
+            #menuitem{
+                display: none;
             }
     }
 
@@ -322,15 +326,7 @@ body{
 
             }
 
-            // span:nth-child(even){
-            //     background-color: white;
-            //     color: black;
-
-            //     &:hover{
-            //         background-color: black;
-            //         color: white;
-            //     }
-            // }
+         
         }
 
     }
@@ -385,6 +381,499 @@ body{
 }
 
 
+
+/* Tablet */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    body{
+
+        
+        
+
+
+
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100vw;
+        $font-Family: 'Courier New', Courier, monospace; 
+        button{
+
+        }
+
+        .styleH{ 
+
+        }
+
+        header{ 
+            position: fixed;
+            width: 100vw;
+            grid-template-columns: 76% 1fr;
+            z-index: 10;
+
+            .logo{
+                background: url("../assets/magsManLogo.png");
+                transform: scale(6);
+                background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+                background-position: center;
+                text-align: left;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: block;
+                margin: 0.5em 2em;
+                width: 40px;
+                height: 100px;
+                
+            }
+
+            
+            nav{
+                display: none;
+            }
+
+            .burger{
+                text-align: right;
+                margin-top: 2em;
+                cursor: pointer;
+
+                .menuLine{
+                    // width: 80px;
+                    height: 2px;
+                    margin: 0em 0em 1em 0;
+                    display: block;
+                    padding: 0;
+                    width: 40%;
+                    background-color: rgb(255, 255, 255);
+                    transition: all 0.6s ease-in-out;
+                }
+
+                .menuLine:nth-child(2), .menuLine:nth-child(3){
+                     width: 21%;
+                }
+
+        }
+
+
+        
+        #menuitem{
+            display: none;
+            background-color: white;
+            width: 100%;
+            position: absolute;
+            margin-top: 10vh;
+            padding: 5em 1em;
+
+            ul{
+
+               
+
+            li {
+                list-style-type: none;
+                
+
+                a{
+                    color: black;
+                    font: $font-Family;
+                    text-decoration: none;
+                    font-size: 1.5em;
+                    font-weight: 800;
+                    display: block;
+                    margin: 2em 0;
+                    position: relative;
+                    padding-left: 40px;
+                    width: fit-content;
+
+                  
+                   
+
+                    &::before{
+                        content: "";
+                        width: 20px;
+                        height: 2px;
+                        top: 45%;
+                        left: -1%;
+                        display: block;
+                        background-color: rgb(0, 0, 0);
+                        position: absolute;
+                    }
+              }
+            }
+        }
+
+    }
+        }
+
+        main{
+
+            .showcase {
+                margin: 16vh 0vh 20vh 0;
+                
+
+                &::before{
+                    transform: scale(1);
+                    opacity: 0.3;
+                    background-position-x: 110%
+                }
+
+                p{
+                    width: 100%;
+                }
+            }
+
+            .who{
+
+                h1{
+                    width: 100%;
+                    font-size: 3em;
+                }
+
+                p{
+                    width: 90%;
+                }
+            }
+
+            .contactUs{
+
+                h1{
+    
+                    &::before{
+                        right: 10%;
+                    }
+                }
+            }
+    
+            .clients{
+    
+                h1{
+    
+                    &::before{
+                        right: 10%;
+                    }
+                }
+            }
+        }
+
+        footer{
+
+            span{
+                margin-bottom: 2em;
+                display: block;
+            }
+
+            .footerSection{
+               display: block;
+
+                .stayInfo{
+                    text-align: center;
+                    padding-top: 0;
+                    grid-template-columns: 80% 1fr;
+
+                    input{
+                        width: 70%;
+                    }
+                }
+
+                .footerLogo{
+                    transform: scale(2);
+                    height: 10vh;
+                    background-position-x: 50%;
+                }
+            }
+
+
+            p{
+                margin-top: 2em;
+            }
+        }
+
+       
+
+    }
+
+}
+
+// MOBILE!!!!!!!!!!!!!
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100vw;
+        $font-Family: 'Courier New', Courier, monospace; 
+        button{
+
+        }
+
+        .styleH{ 
+
+        }
+
+        header{ 
+            position: fixed;
+            width: 100vw;
+            grid-template-columns: 80% 1fr;
+            z-index: 10;
+
+            .logo{
+                background: url("../assets/magsManLogo.png");
+                transform: scale(6);
+                background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+                background-position: center;
+                text-align: left;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: block;
+                margin: 0.5em 2em;
+                width: 40px;
+                height: 100px;
+                
+            }
+
+            
+            nav{
+                display: none;
+            }
+
+            .burger{
+                margin-top: 2em;
+                cursor: pointer;
+
+                .menuLine{
+                    // width: 80px;
+                    height: 2px;
+                    margin: 0em 0em 1em 0;
+                    display: block;
+                    padding: 0;
+                    width: 60%;
+                    background-color: rgb(255, 255, 255);
+                    transition: all 0.6s ease-in-out;
+                }
+
+                .menuLine:nth-child(2), .menuLine:nth-child(3){
+                     width: 31%;
+                }
+
+        }
+
+
+        
+        #menuitem{
+            display: none;
+            background-color: white;
+            width: 100%;
+            position: absolute;
+            margin-top: 20vh;
+            padding: 6em 1em;
+
+            ul{
+
+               
+
+            li {
+                list-style-type: none;
+                
+
+                a{
+                    color: black;
+                    font: $font-Family;
+                    text-decoration: none;
+                    font-size: 1.5em;
+                    font-weight: 800;
+                    display: block;
+                    margin: 2em 0;
+                    position: relative;
+                    padding-left: 40px;
+                    width: fit-content;
+
+                  
+                   
+
+                    &::before{
+                        content: "";
+                        width: 20px;
+                        height: 2px;
+                        top: 45%;
+                        left: -1%;
+                        display: block;
+                        background-color: rgb(0, 0, 0);
+                        position: absolute;
+                    }
+              }
+            }
+        }
+
+    }
+        }
+
+        main{
+
+            .showcase {
+                margin: 16vh 0vh 20vh 0;
+                
+                h1{
+                    font-size: 3.2em;
+                    margin-top: 3em;
+                }
+
+                &::before{
+                    transform: scale(1);
+                    opacity: 0.3;
+                    background-position-x: 110%
+                }
+
+                p{
+                    width: 80%;
+                    font-size: 1.2em;
+                }
+            }
+
+            .who{
+
+                h1{
+                    width: 100%;
+                    font-size: 2.4em;
+                }
+
+                p{
+                    width: 90%;
+                    font-size: 1.1em;
+                }
+            }
+
+            .contactUs{
+
+                padding: 35vh 0;
+
+                h1{
+
+                    font-size: 1.6em;
+    
+                    &::before{
+                        right: 10%;
+                    }
+                }
+            }
+    
+            .clients{
+
+                .clientCard{
+                    display: block;
+                    width: 100%;
+                    align-items: none;
+                    justify-items: none;
+                    margin: 0;
+                    border: none;
+                    grid-column-gap: 0;
+                    border: none;
+                    text-align: left;
+
+                    span{
+                    
+                        border: none;
+                        display: block;
+                    }
+                }
+    
+                h1{
+                    font-size: 2.6em;                        
+                    &::before{
+
+                        display: none;
+                        right: 22%;
+                    }
+                }
+            }
+        }
+
+        footer{
+
+            span{
+                margin-bottom: 2em;
+                display: block;
+            }
+
+            .footerSection{
+               display: block;
+
+                .stayInfo{
+                    text-align: center;
+                    padding-top: 0;
+                    display: block;
+                    width: 100%;
+
+                    #infoForm{
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 1.3fr 1fr;
+                        
+                    }
+
+                    input{
+                        width: 70%;
+                        display: inline-block;
+                    }
+
+                    button{
+                        background-color: white;
+                        color: black;
+                    }
+                }
+
+                .footerLogo{
+                    transform: scale(3);
+                    height: 14vh;
+                    margin-top: 4em;
+                    background-position-x: 50%;
+                }
+            }
+
+
+            p{
+                margin-top: 2em;
+            }
+        }
+
+        .turnDown{
+    
+            // width: 80px;
+            height: 2px;
+            margin: 0em 0em 1em 0;
+            display: block;
+            padding: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            transform-origin: 0%;
+          transform: rotate(40deg);
+          transition: all 0.6s ease-in-out;
+        
+        
+     }
+     
+     .turnUp{
+         height: 2px;
+         margin: 0em 0em 1em 0;
+         display: block;
+         padding: 0;
+         background-color: rgb(255, 255, 255);
+         transform-origin: 0%;
+         transform: rotate(-40deg) translateY(27px) translateX(-24px);
+         width: 100%;
+         transition: all 0.6s ease-in-out;
+         
+     }
+     
+       
+
+    }
+
+}
+
+
+
+
+
+// Animation
 @keyframes typing {
 
     from{
@@ -398,3 +887,33 @@ body{
  
 }
     
+
+
+.turnDown{
+    
+       // width: 80px;
+       height: 2px;
+       margin: 0em 0em 1em 0;
+       display: block;
+       padding: 0;
+       width: 40%;
+       background-color: rgb(255, 255, 255);
+       transform-origin: 0%;
+     transform: rotate(40deg);
+     transition: all 0.6s ease-in-out;
+   
+   
+}
+
+.turnUp{
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    transform-origin: 0%;
+    transform: rotate(-40deg) translateY(27px) translateX(-24px);
+    width: 40%;
+    transition: all 0.6s ease-in-out;
+    
+}

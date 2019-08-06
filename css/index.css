@@ -60,7 +60,7 @@ body header {
   background-color: #030303;
   -ms-grid-columns: 30% 1fr;
       grid-template-columns: 30% 1fr;
-  z-index: 2;
+  z-index: 10;
 }
 
 body header .logo {
@@ -122,6 +122,10 @@ body header nav ul a {
   color: white;
   display: inline-block;
   text-decoration: none;
+}
+
+body header #menuitem {
+  display: none;
 }
 
 body main {
@@ -348,6 +352,350 @@ body footer p {
   margin-top: 9em;
 }
 
+/* Tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  body header {
+    position: fixed;
+    width: 100vw;
+    -ms-grid-columns: 76% 1fr;
+        grid-template-columns: 76% 1fr;
+    z-index: 10;
+  }
+  body header .logo {
+    background: url("../assets/magsManLogo.png");
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+    background-position: center;
+    text-align: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0.5em 2em;
+    width: 40px;
+    height: 100px;
+  }
+  body header nav {
+    display: none;
+  }
+  body header .burger {
+    text-align: right;
+    margin-top: 2em;
+    cursor: pointer;
+  }
+  body header .burger .menuLine {
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    width: 40%;
+    background-color: white;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  body header .burger .menuLine:nth-child(2), body header .burger .menuLine:nth-child(3) {
+    width: 21%;
+  }
+  body header #menuitem {
+    display: none;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    margin-top: 10vh;
+    padding: 5em 1em;
+  }
+  body header #menuitem ul li {
+    list-style-type: none;
+  }
+  body header #menuitem ul li a {
+    color: black;
+    font: "Courier New", Courier, monospace;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 800;
+    display: block;
+    margin: 2em 0;
+    position: relative;
+    padding-left: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body header #menuitem ul li a::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    top: 45%;
+    left: -1%;
+    display: block;
+    background-color: black;
+    position: absolute;
+  }
+  body main .showcase {
+    margin: 16vh 0vh 20vh 0;
+  }
+  body main .showcase::before {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.3;
+    background-position-x: 110%;
+  }
+  body main .showcase p {
+    width: 100%;
+  }
+  body main .who h1 {
+    width: 100%;
+    font-size: 3em;
+  }
+  body main .who p {
+    width: 90%;
+  }
+  body main .contactUs h1::before {
+    right: 10%;
+  }
+  body main .clients h1::before {
+    right: 10%;
+  }
+  body footer span {
+    margin-bottom: 2em;
+    display: block;
+  }
+  body footer .footerSection {
+    display: block;
+  }
+  body footer .footerSection .stayInfo {
+    text-align: center;
+    padding-top: 0;
+    -ms-grid-columns: 80% 1fr;
+        grid-template-columns: 80% 1fr;
+  }
+  body footer .footerSection .stayInfo input {
+    width: 70%;
+  }
+  body footer .footerSection .footerLogo {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    height: 10vh;
+    background-position-x: 50%;
+  }
+  body footer p {
+    margin-top: 2em;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  body header {
+    position: fixed;
+    width: 100vw;
+    -ms-grid-columns: 80% 1fr;
+        grid-template-columns: 80% 1fr;
+    z-index: 10;
+  }
+  body header .logo {
+    background: url("../assets/magsManLogo.png");
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+    background-position: center;
+    text-align: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0.5em 2em;
+    width: 40px;
+    height: 100px;
+  }
+  body header nav {
+    display: none;
+  }
+  body header .burger {
+    margin-top: 2em;
+    cursor: pointer;
+  }
+  body header .burger .menuLine {
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    width: 60%;
+    background-color: white;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  body header .burger .menuLine:nth-child(2), body header .burger .menuLine:nth-child(3) {
+    width: 31%;
+  }
+  body header #menuitem {
+    display: none;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    margin-top: 20vh;
+    padding: 6em 1em;
+  }
+  body header #menuitem ul li {
+    list-style-type: none;
+  }
+  body header #menuitem ul li a {
+    color: black;
+    font: "Courier New", Courier, monospace;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 800;
+    display: block;
+    margin: 2em 0;
+    position: relative;
+    padding-left: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body header #menuitem ul li a::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    top: 45%;
+    left: -1%;
+    display: block;
+    background-color: black;
+    position: absolute;
+  }
+  body main .showcase {
+    margin: 16vh 0vh 20vh 0;
+  }
+  body main .showcase h1 {
+    font-size: 3.2em;
+    margin-top: 3em;
+  }
+  body main .showcase::before {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.3;
+    background-position-x: 110%;
+  }
+  body main .showcase p {
+    width: 80%;
+    font-size: 1.2em;
+  }
+  body main .who h1 {
+    width: 100%;
+    font-size: 2.4em;
+  }
+  body main .who p {
+    width: 90%;
+    font-size: 1.1em;
+  }
+  body main .contactUs {
+    padding: 35vh 0;
+  }
+  body main .contactUs h1 {
+    font-size: 1.6em;
+  }
+  body main .contactUs h1::before {
+    right: 10%;
+  }
+  body main .clients .clientCard {
+    display: block;
+    width: 100%;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
+    justify-items: none;
+    margin: 0;
+    border: none;
+    grid-column-gap: 0;
+    border: none;
+    text-align: left;
+  }
+  body main .clients .clientCard span {
+    border: none;
+    display: block;
+  }
+  body main .clients h1 {
+    font-size: 2.6em;
+  }
+  body main .clients h1::before {
+    display: none;
+    right: 22%;
+  }
+  body footer span {
+    margin-bottom: 2em;
+    display: block;
+  }
+  body footer .footerSection {
+    display: block;
+  }
+  body footer .footerSection .stayInfo {
+    text-align: center;
+    padding-top: 0;
+    display: block;
+    width: 100%;
+  }
+  body footer .footerSection .stayInfo #infoForm {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.3fr 1fr;
+        grid-template-columns: 1.3fr 1fr;
+  }
+  body footer .footerSection .stayInfo input {
+    width: 70%;
+    display: inline-block;
+  }
+  body footer .footerSection .stayInfo button {
+    background-color: white;
+    color: black;
+  }
+  body footer .footerSection .footerLogo {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    height: 14vh;
+    margin-top: 4em;
+    background-position-x: 50%;
+  }
+  body footer p {
+    margin-top: 2em;
+  }
+  body .turnDown {
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    -webkit-transform-origin: 0%;
+            transform-origin: 0%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  body .turnUp {
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    background-color: white;
+    -webkit-transform-origin: 0%;
+            transform-origin: 0%;
+    -webkit-transform: rotate(-40deg) translateY(27px) translateX(-24px);
+            transform: rotate(-40deg) translateY(27px) translateX(-24px);
+    width: 100%;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+}
+
 @-webkit-keyframes typing {
   from {
     opacity: 0;
@@ -364,5 +712,35 @@ body footer p {
   to {
     opacity: 1;
   }
+}
+
+.turnDown {
+  height: 2px;
+  margin: 0em 0em 1em 0;
+  display: block;
+  padding: 0;
+  width: 40%;
+  background-color: white;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.turnUp {
+  height: 2px;
+  margin: 0em 0em 1em 0;
+  display: block;
+  padding: 0;
+  background-color: white;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transform: rotate(-40deg) translateY(27px) translateX(-24px);
+          transform: rotate(-40deg) translateY(27px) translateX(-24px);
+  width: 40%;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 /*# sourceMappingURL=index.css.map */
