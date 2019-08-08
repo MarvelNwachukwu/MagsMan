@@ -1,0 +1,783 @@
+*{
+    margin: 0;
+    padding: 0;
+    // overflow: hidden;
+   
+}
+body{
+    $font-Family: 'Courier New', Courier, monospace; 
+    
+
+
+    background-color: rgb(3, 3, 3);
+    font-family: $font-Family; 
+    font-weight: lighter;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+    // CSS componet styles
+    button{
+        background-color: transparent;
+        color: white;
+        padding: 1em 2em;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-family: $font-Family; 
+        font-size: 1.1em;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.4s ease-out;
+         
+        &:hover{
+            transform: scale(1.03)
+        }
+    }
+
+    .styleH{
+        font-size: 2.6em;
+        position: relative;
+        margin-bottom: 0.5em;
+        width: 30%;
+
+        &::before{
+            position: absolute;
+            bottom: 0;
+            content: "";
+            width: 0.1%;
+            right: 0;
+            height: 100%;
+            display: block;
+            background-color: white;
+        }
+    }
+
+    
+
+
+    // Desktop View;
+    header{
+        display: grid;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0.5em 0;
+        background-color: rgb(3, 3, 3);
+        grid-template-columns: 30% 1fr;
+        z-index: 10;
+
+            .logo{
+                background: url("../assets/magsManLogo.png");
+                transform: scale(6);
+                background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+                background-position: center;
+                text-align: left;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: block;
+                margin: 0.5em 0;
+
+                
+            }
+            
+            nav{
+                text-align: right;
+                padding: 1em 0;
+                ul{
+                    display: grid;
+                    grid-template-columns: repeat(3, 13.3%);
+                    grid-column-gap: 2em;
+                    text-align: right;
+                    text-decoration: none;
+
+                    li{
+                        list-style: none;
+                        position: relative;
+
+                            ::before{
+                                width: 30%;
+                                height: 9%;
+                                bottom: -12%;
+                                background-color: white;
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                transition: all 0.61s ease-in-out;
+                            }
+
+                            :hover::before{
+                                width: 50%;
+                                height: 15%;
+                                bottom: -12%;
+                                background-color: white;
+                                display: block;
+                                content: "";
+                                position: absolute;
+                            }
+
+                          
+                    }
+
+                    a{
+                        color: white;
+                        display: inline-block;
+                        text-decoration: none;
+
+                            
+                    }
+                }
+                
+
+            }
+
+            #menuitem{
+                display: none;
+            }
+    }
+
+
+    .showcase{
+
+        margin-top: 20vh;
+        color: white;
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        padding: 1em 1em;
+
+        .showcaseText{
+            h1{
+                color: white;
+                font-family: $font-Family;
+                font-weight: 600;
+                font-size: 4em;
+                margin-bottom: 0.4em
+            }
+
+            p{
+                color: white;
+                width: 60%;
+                margin-bottom: 2em;
+                line-height: 1.4em;
+                font-size: 1.5em;
+            }
+
+        }
+
+        .showcaseImg{
+            padding: 20vh;
+            background: url("../assets/ideaBulb.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: scale(1.3)
+        }
+    }
+
+    .projectDetails{
+        padding: 2em;
+        margin: 3em 0;
+        text-align: center;
+
+
+            .projects{
+                display: grid;
+                grid-template-columns: repeat(3, 1.4fr);
+               
+                    .projectCard {
+                        color: white;
+                        margin: 3em 0;
+
+                            .projectCardImg{
+                                width: 17em;
+                                height: 17em;
+                                background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/falz.jpg");
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                margin: 0 auto;
+                                border-radius: 0.6em;
+                            }
+                    }
+
+                    .projectCard:nth-child(1){
+
+                        .projectCardImg{
+                            width: 17em;
+                            height: 17em;
+                            background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/ink\ business.jpg");
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            margin: 0 auto;
+                            border-radius: 0.6em;
+                        }
+                    }
+
+                    .projectCard:nth-child(2){
+
+                        .projectCardImg{
+                            width: 17em;
+                            height: 17em;
+                            background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/falz.jpg");
+                          
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            margin: 0 auto;
+                            border-radius: 0.6em;
+                        }
+                    }
+
+                    
+                    .projectCard:nth-child(3){
+
+                        .projectCardImg{
+                            width: 17em;
+                            height: 17em;
+                            background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/Frazers\ Suites.png");
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            margin: 0 auto;
+                            border-radius: 0.6em;
+                        }
+                    }
+
+                     
+                    .projectCard:nth-child(4){
+
+                        .projectCardImg{
+                            width: 17em;
+                            height: 17em;
+                            background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/travelbeta.jpg");
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            margin: 0 auto;
+                            border-radius: 0.6em;
+                        }
+                    }
+
+                    .projectCard:nth-child(5){
+
+                        .projectCardImg{
+                            width: 17em;
+                            height: 17em;
+                            background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/chaka.JPG");
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            margin: 0 auto;
+                            border-radius: 0.6em;
+                        }
+                    }
+            }
+
+    }
+
+
+
+
+    footer{
+        color: white;
+        padding: 6em 0 1em 1em;
+
+        .footerSection{
+            display: grid;
+            grid-template-columns:  60% 1fr;
+
+            .stayInfo{
+                display:    grid;
+                padding-top: 10vh;
+                grid-template-columns: 90% 1fr;
+
+                input{
+                    background-color: transparent;
+                    border: 2px solid white;
+                    padding: 0.9em 1em;
+                    border-radius: 5px;
+                    width: 70%;
+                    color: white;
+                    font-family: $font-Family;
+                    font-size: 1.2em;
+                    
+                }
+            }
+
+            .footerLogo{
+                text-align: center;
+                height: 30vh;
+                background: url("../assets/magsManLogoText.png");
+                background-size: contain;
+                background-position-x: 40%;
+                background-repeat: no-repeat;
+                transform: scale(3);
+                z-index: -1;
+            }
+
+        }
+
+        p{
+            text-align: center;
+            margin-top: 9em;
+        }
+    }
+}
+
+
+/* Tablet */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100vw;
+        $font-Family: 'Courier New', Courier, monospace; 
+        
+        header{ 
+            position: fixed;
+            width: 100vw;
+            grid-template-columns: 76% 1fr;
+            z-index: 10;
+
+            .logo{
+                background: url("../assets/magsManLogo.png");
+                transform: scale(6);
+                background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+                background-position: center;
+                text-align: left;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: block;
+                margin: 0.5em 2em;
+                width: 40px;
+                height: 100px;
+                
+            }
+
+            
+            nav{
+                display: none;
+            }
+
+            .burger{
+                text-align: right;
+                margin-top: 2em;
+                cursor: pointer;
+
+                .menuLine{
+                    // width: 80px;
+                    height: 2px;
+                    margin: 0em 0em 1em 0;
+                    display: block;
+                    padding: 0;
+                    width: 40%;
+                    background-color: rgb(255, 255, 255);
+                    transition: all 0.6s ease-in-out;
+                }
+
+                .menuLine:nth-child(2), .menuLine:nth-child(3){
+                     width: 21%;
+                }
+
+        }
+
+
+        
+        #menuitem{
+            display: none;
+            background-color: white;
+            width: 100%;
+            position: absolute;
+            margin-top: 10vh;
+            padding: 5em 1em;
+
+            ul{
+
+               
+
+            li {
+                list-style-type: none;
+                
+
+                a{
+                    color: black;
+                    font: $font-Family;
+                    text-decoration: none;
+                    font-size: 1.5em;
+                    font-weight: 800;
+                    display: block;
+                    margin: 2em 0;
+                    position: relative;
+                    padding-left: 40px;
+                    width: fit-content;
+
+                  
+                   
+
+                    &::before{
+                        content: "";
+                        width: 20px;
+                        height: 2px;
+                        top: 45%;
+                        left: -1%;
+                        display: block;
+                        background-color: rgb(0, 0, 0);
+                        position: absolute;
+                    }
+              }
+            }
+        }
+
+    }
+        }
+
+        main{ 
+
+            .showcase{
+                grid-template-columns: 2fr 1fr;     
+                
+                .showcaseText{
+                   
+                    p{
+                        width: 100%;
+                    }
+                }
+
+                .showcaseImg{
+                    padding: 10vh;
+                    opacity: 0.5
+
+                }
+            }
+
+            .projectDetails{
+
+                .projects{
+                    grid-template-columns: repeat(2, 1fr)
+                }
+            }
+        }
+
+        footer{
+
+            span{
+                margin-bottom: 2em;
+                display: block;
+            }
+
+            .footerSection{
+               display: block;
+
+                .stayInfo{
+                    text-align: center;
+                    padding-top: 0;
+                    grid-template-columns: 80% 1fr;
+
+                    input{
+                        width: 70%;
+                    }
+                }
+
+                .footerLogo{
+                    transform: scale(2);
+                    height: 10vh;
+                    background-position-x: 50%;
+                }
+            }
+
+
+            p{
+                margin-top: 2em;
+            }
+        }
+
+}
+
+
+}
+
+
+
+
+// MOBILE!!!!!!!!!!!!!
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100vw;
+        $font-Family: 'Courier New', Courier, monospace; 
+        button{
+
+        }
+
+        .styleH{ 
+
+        }
+
+        header{ 
+            position: fixed;
+            width: 100vw;
+            grid-template-columns: 80% 1fr;
+            z-index: 10;
+
+            .logo{
+                background: url("../assets/magsManLogo.png");
+                transform: scale(6);
+                background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+                background-position: center;
+                text-align: left;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: block;
+                margin: 0.5em 2em;
+                width: 40px;
+                height: 100px;
+                
+            }
+
+            
+            nav{
+                display: none;
+            }
+
+            .burger{
+                margin-top: 2em;
+                cursor: pointer;
+
+                .menuLine{
+                    // width: 80px;
+                    height: 2px;
+                    margin: 0em 0em 1em 0;
+                    display: block;
+                    padding: 0;
+                    width: 60%;
+                    background-color: rgb(255, 255, 255);
+                    transition: all 0.6s ease-in-out;
+                }
+
+                .menuLine:nth-child(2), .menuLine:nth-child(3){
+                     width: 31%;
+                }
+
+        }
+
+
+        
+        #menuitem{
+            display: none;
+            background-color: white;
+            width: 100%;
+            position: absolute;
+            margin-top: 20vh;
+            padding: 6em 1em;
+
+            ul{
+
+               
+
+            li {
+                list-style-type: none;
+                
+
+                a{
+                    color: black;
+                    font: $font-Family;
+                    text-decoration: none;
+                    font-size: 1.5em;
+                    font-weight: 800;
+                    display: block;
+                    margin: 2em 0;
+                    position: relative;
+                    padding-left: 40px;
+                    width: fit-content;
+
+                  
+                   
+
+                    &::before{
+                        content: "";
+                        width: 20px;
+                        height: 2px;
+                        top: 45%;
+                        left: -1%;
+                        display: block;
+                        background-color: rgb(0, 0, 0);
+                        position: absolute;
+                    }
+              }
+            }
+        }
+
+    }
+        }
+
+        main{ 
+
+            .showcase{
+                display: block;     
+                
+                .showcaseText{
+
+                    h1{
+                        font-size: 2.3em;
+                    }
+                   
+                    p{
+                        width: 100%;
+                        font-size: 1.3em;
+                    }
+                }
+
+                .showcaseImg{
+                    padding: 10vh;
+                    opacity: 0.5
+
+                }
+            }
+
+            .projectDetails{
+
+                .projects{
+                    display: block;
+                }
+            }
+        }
+
+      
+
+        footer{
+
+            span{
+                margin-bottom: 2em;
+                display: block;
+            }
+
+            .footerSection{
+               display: block;
+
+                .stayInfo{
+                    text-align: center;
+                    padding-top: 0;
+                    display: block;
+                    width: 100%;
+
+                    #infoForm{
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 1.3fr 1fr;
+                    }
+
+                    input{
+                        width: 70%;
+                        display: inline-block;
+                    }
+
+                    button{
+                        background-color: white;
+                        color: black;
+                    }
+                }
+
+                .footerLogo{
+                    transform: scale(3);
+                    height: 14vh;
+                    margin-top: 4em;
+                    background-position-x: 50%;
+                }
+            }
+
+
+            p{
+                margin-top: 2em;
+            }
+        }
+
+        .turnDown{
+    
+            // width: 80px;
+            height: 2px;
+            margin: 0em 0em 1em 0;
+            display: block;
+            padding: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            transform-origin: 0%;
+          transform: rotate(40deg);
+          transition: all 0.6s ease-in-out;
+        
+        
+     }
+     
+     .turnUp{
+         height: 2px;
+         margin: 0em 0em 1em 0;
+         display: block;
+         padding: 0;
+         background-color: rgb(255, 255, 255);
+         transform-origin: 0%;
+         transform: rotate(-40deg) translateY(27px) translateX(-24px);
+         width: 100%;
+         transition: all 0.6s ease-in-out;
+         
+     }
+     
+       
+
+    }
+
+}
+
+
+
+
+
+// Animation
+@keyframes typing {
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+ 
+}
+    
+
+
+.turnDown{
+    
+       // width: 80px;
+       height: 2px;
+       margin: 0em 0em 1em 0;
+       display: block;
+       padding: 0;
+       width: 40%;
+       background-color: rgb(255, 255, 255);
+       transform-origin: 0%;
+     transform: rotate(40deg);
+     transition: all 0.6s ease-in-out;
+   
+   
+}
+
+.turnUp{
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    transform-origin: 0%;
+    transform: rotate(-40deg) translateY(27px) translateX(-24px);
+    width: 40%;
+    transition: all 0.6s ease-in-out;
+    
+}

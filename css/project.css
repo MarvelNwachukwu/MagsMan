@@ -1,0 +1,645 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #030303;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body button {
+  background-color: transparent;
+  color: white;
+  padding: 1em 2em;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1em;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+body button:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+body .styleH {
+  font-size: 2.6em;
+  position: relative;
+  margin-bottom: 0.5em;
+  width: 30%;
+}
+
+body .styleH::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 0.1%;
+  right: 0;
+  height: 100%;
+  display: block;
+  background-color: white;
+}
+
+body header {
+  display: -ms-grid;
+  display: grid;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0.5em 0;
+  background-color: #030303;
+  -ms-grid-columns: 30% 1fr;
+      grid-template-columns: 30% 1fr;
+  z-index: 10;
+}
+
+body header .logo {
+  background: url("../assets/magsManLogo.png");
+  -webkit-transform: scale(6);
+          transform: scale(6);
+  background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+  background-position: center;
+  text-align: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0.5em 0;
+}
+
+body header nav {
+  text-align: right;
+  padding: 1em 0;
+}
+
+body header nav ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (13.3%)[3];
+      grid-template-columns: repeat(3, 13.3%);
+  grid-column-gap: 2em;
+  text-align: right;
+  text-decoration: none;
+}
+
+body header nav ul li {
+  list-style: none;
+  position: relative;
+}
+
+body header nav ul li ::before {
+  width: 30%;
+  height: 9%;
+  bottom: -12%;
+  background-color: white;
+  display: block;
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.61s ease-in-out;
+  transition: all 0.61s ease-in-out;
+}
+
+body header nav ul li :hover::before {
+  width: 50%;
+  height: 15%;
+  bottom: -12%;
+  background-color: white;
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+body header nav ul a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+body header #menuitem {
+  display: none;
+}
+
+body .showcase {
+  margin-top: 20vh;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.7fr 1fr;
+      grid-template-columns: 1.7fr 1fr;
+  padding: 1em 1em;
+}
+
+body .showcase .showcaseText h1 {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 4em;
+  margin-bottom: 0.4em;
+}
+
+body .showcase .showcaseText p {
+  color: white;
+  width: 60%;
+  margin-bottom: 2em;
+  line-height: 1.4em;
+  font-size: 1.5em;
+}
+
+body .showcase .showcaseImg {
+  padding: 20vh;
+  background: url("../assets/ideaBulb.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+body .projectDetails {
+  padding: 2em;
+  margin: 3em 0;
+  text-align: center;
+}
+
+body .projectDetails .projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1.4fr)[3];
+      grid-template-columns: repeat(3, 1.4fr);
+}
+
+body .projectDetails .projects .projectCard {
+  color: white;
+  margin: 3em 0;
+}
+
+body .projectDetails .projects .projectCard .projectCardImg {
+  width: 17em;
+  height: 17em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.616)), to(gray)), url("../assets/falz.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/falz.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 0.6em;
+}
+
+body .projectDetails .projects .projectCard:nth-child(1) .projectCardImg {
+  width: 17em;
+  height: 17em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.616)), to(gray)), url("../assets/ink business.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/ink business.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 0.6em;
+}
+
+body .projectDetails .projects .projectCard:nth-child(2) .projectCardImg {
+  width: 17em;
+  height: 17em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.616)), to(gray)), url("../assets/falz.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/falz.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 0.6em;
+}
+
+body .projectDetails .projects .projectCard:nth-child(3) .projectCardImg {
+  width: 17em;
+  height: 17em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.616)), to(gray)), url("../assets/Frazers Suites.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/Frazers Suites.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 0.6em;
+}
+
+body .projectDetails .projects .projectCard:nth-child(4) .projectCardImg {
+  width: 17em;
+  height: 17em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.616)), to(gray)), url("../assets/travelbeta.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/travelbeta.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 0.6em;
+}
+
+body .projectDetails .projects .projectCard:nth-child(5) .projectCardImg {
+  width: 17em;
+  height: 17em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.616)), to(gray)), url("../assets/chaka.JPG");
+  background: linear-gradient(rgba(255, 255, 255, 0.616), gray), url("../assets/chaka.JPG");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 0.6em;
+}
+
+body footer {
+  color: white;
+  padding: 6em 0 1em 1em;
+}
+
+body footer .footerSection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 1fr;
+      grid-template-columns: 60% 1fr;
+}
+
+body footer .footerSection .stayInfo {
+  display: -ms-grid;
+  display: grid;
+  padding-top: 10vh;
+  -ms-grid-columns: 90% 1fr;
+      grid-template-columns: 90% 1fr;
+}
+
+body footer .footerSection .stayInfo input {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 0.9em 1em;
+  border-radius: 5px;
+  width: 70%;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2em;
+}
+
+body footer .footerSection .footerLogo {
+  text-align: center;
+  height: 30vh;
+  background: url("../assets/magsManLogoText.png");
+  background-size: contain;
+  background-position-x: 40%;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: -1;
+}
+
+body footer p {
+  text-align: center;
+  margin-top: 9em;
+}
+
+/* Tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  body header {
+    position: fixed;
+    width: 100vw;
+    -ms-grid-columns: 76% 1fr;
+        grid-template-columns: 76% 1fr;
+    z-index: 10;
+  }
+  body header .logo {
+    background: url("../assets/magsManLogo.png");
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+    background-position: center;
+    text-align: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0.5em 2em;
+    width: 40px;
+    height: 100px;
+  }
+  body header nav {
+    display: none;
+  }
+  body header .burger {
+    text-align: right;
+    margin-top: 2em;
+    cursor: pointer;
+  }
+  body header .burger .menuLine {
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    width: 40%;
+    background-color: white;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  body header .burger .menuLine:nth-child(2), body header .burger .menuLine:nth-child(3) {
+    width: 21%;
+  }
+  body header #menuitem {
+    display: none;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    margin-top: 10vh;
+    padding: 5em 1em;
+  }
+  body header #menuitem ul li {
+    list-style-type: none;
+  }
+  body header #menuitem ul li a {
+    color: black;
+    font: "Courier New", Courier, monospace;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 800;
+    display: block;
+    margin: 2em 0;
+    position: relative;
+    padding-left: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body header #menuitem ul li a::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    top: 45%;
+    left: -1%;
+    display: block;
+    background-color: black;
+    position: absolute;
+  }
+  body main .showcase {
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  body main .showcase .showcaseText p {
+    width: 100%;
+  }
+  body main .showcase .showcaseImg {
+    padding: 10vh;
+    opacity: 0.5;
+  }
+  body main .projectDetails .projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  body footer span {
+    margin-bottom: 2em;
+    display: block;
+  }
+  body footer .footerSection {
+    display: block;
+  }
+  body footer .footerSection .stayInfo {
+    text-align: center;
+    padding-top: 0;
+    -ms-grid-columns: 80% 1fr;
+        grid-template-columns: 80% 1fr;
+  }
+  body footer .footerSection .stayInfo input {
+    width: 70%;
+  }
+  body footer .footerSection .footerLogo {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    height: 10vh;
+    background-position-x: 50%;
+  }
+  body footer p {
+    margin-top: 2em;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  body header {
+    position: fixed;
+    width: 100vw;
+    -ms-grid-columns: 80% 1fr;
+        grid-template-columns: 80% 1fr;
+    z-index: 10;
+  }
+  body header .logo {
+    background: url("../assets/magsManLogo.png");
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    background: rgba(255, 0, 0, 0) url("../assets/magsManLogo.png");
+    background-position: center;
+    text-align: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0.5em 2em;
+    width: 40px;
+    height: 100px;
+  }
+  body header nav {
+    display: none;
+  }
+  body header .burger {
+    margin-top: 2em;
+    cursor: pointer;
+  }
+  body header .burger .menuLine {
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    width: 60%;
+    background-color: white;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  body header .burger .menuLine:nth-child(2), body header .burger .menuLine:nth-child(3) {
+    width: 31%;
+  }
+  body header #menuitem {
+    display: none;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    margin-top: 20vh;
+    padding: 6em 1em;
+  }
+  body header #menuitem ul li {
+    list-style-type: none;
+  }
+  body header #menuitem ul li a {
+    color: black;
+    font: "Courier New", Courier, monospace;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 800;
+    display: block;
+    margin: 2em 0;
+    position: relative;
+    padding-left: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body header #menuitem ul li a::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    top: 45%;
+    left: -1%;
+    display: block;
+    background-color: black;
+    position: absolute;
+  }
+  body main .showcase {
+    display: block;
+  }
+  body main .showcase .showcaseText h1 {
+    font-size: 2.3em;
+  }
+  body main .showcase .showcaseText p {
+    width: 100%;
+    font-size: 1.3em;
+  }
+  body main .showcase .showcaseImg {
+    padding: 10vh;
+    opacity: 0.5;
+  }
+  body main .projectDetails .projects {
+    display: block;
+  }
+  body footer span {
+    margin-bottom: 2em;
+    display: block;
+  }
+  body footer .footerSection {
+    display: block;
+  }
+  body footer .footerSection .stayInfo {
+    text-align: center;
+    padding-top: 0;
+    display: block;
+    width: 100%;
+  }
+  body footer .footerSection .stayInfo #infoForm {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.3fr 1fr;
+        grid-template-columns: 1.3fr 1fr;
+  }
+  body footer .footerSection .stayInfo input {
+    width: 70%;
+    display: inline-block;
+  }
+  body footer .footerSection .stayInfo button {
+    background-color: white;
+    color: black;
+  }
+  body footer .footerSection .footerLogo {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    height: 14vh;
+    margin-top: 4em;
+    background-position-x: 50%;
+  }
+  body footer p {
+    margin-top: 2em;
+  }
+  body .turnDown {
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    -webkit-transform-origin: 0%;
+            transform-origin: 0%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  body .turnUp {
+    height: 2px;
+    margin: 0em 0em 1em 0;
+    display: block;
+    padding: 0;
+    background-color: white;
+    -webkit-transform-origin: 0%;
+            transform-origin: 0%;
+    -webkit-transform: rotate(-40deg) translateY(27px) translateX(-24px);
+            transform: rotate(-40deg) translateY(27px) translateX(-24px);
+    width: 100%;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+}
+
+@-webkit-keyframes typing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.turnDown {
+  height: 2px;
+  margin: 0em 0em 1em 0;
+  display: block;
+  padding: 0;
+  width: 40%;
+  background-color: white;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.turnUp {
+  height: 2px;
+  margin: 0em 0em 1em 0;
+  display: block;
+  padding: 0;
+  background-color: white;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transform: rotate(-40deg) translateY(27px) translateX(-24px);
+          transform: rotate(-40deg) translateY(27px) translateX(-24px);
+  width: 40%;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+/*# sourceMappingURL=project.css.map */
