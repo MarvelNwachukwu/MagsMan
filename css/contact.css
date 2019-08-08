@@ -12,10 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-body .body {
-  overflow-x: hidden;
-}
-
 body button {
   background-color: transparent;
   color: white;
@@ -132,32 +128,17 @@ body header #menuitem {
   display: none;
 }
 
-body main {
-  padding: 0em 0em 0em 1em;
-}
-
 body main .showcase {
-  margin: 26vh 0vh 40vh 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  position: relative;
+  margin-top: 20vh;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.7fr 1fr;
+      grid-template-columns: 1.7fr 1fr;
+  padding: 1em 1em;
 }
 
-body main .showcase::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: inline-block;
-  background: url("../assets/magsManLeaves.svg");
-  background-position-x: 98%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-body main .showcase h1 {
+body main .showcase .showcaseText h1 {
   color: white;
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
@@ -165,7 +146,7 @@ body main .showcase h1 {
   margin-bottom: 0.4em;
 }
 
-body main .showcase p {
+body main .showcase .showcaseText p {
   color: white;
   width: 60%;
   margin-bottom: 2em;
@@ -173,139 +154,141 @@ body main .showcase p {
   font-size: 1.5em;
 }
 
-body .who {
-  color: white;
-  margin-bottom: 2em;
-  position: relative;
+body main .showcase .showcaseImg {
+  padding: 20vh;
+  background: url("../assets/phone-call.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 0.5;
 }
 
-body .who p {
-  font-size: 1.3em;
-  line-height: 1.8em;
-  width: 70%;
+body main .contactDetails {
+  margin: 8em  0;
 }
 
-body .contactUs {
-  background-color: white;
-  padding: 9em 0;
-  text-align: center;
-  background-attachment: scroll;
-  position: relative;
-}
-
-body .contactUs::before {
-  content: "";
-  width: 100%;
-  top: 0;
-  height: 100%;
-  position: absolute;
-  display: block;
-  background: url("../assets/map2.png");
-  z-index: -0.2;
-}
-
-body .contactUs h1 {
-  font-size: 3.4em;
-  position: relative;
-  margin-bottom: 0.5em;
-}
-
-body .contactUs h1::before {
-  width: 0.2%;
-  height: 100%;
-  right: 30%;
-  bottom: -12%;
-  background-color: black;
-  display: block;
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.61s ease-in-out;
-  transition: all 0.61s ease-in-out;
-  -webkit-animation: typing infinite 0.5s alternate ease-in-out;
-          animation: typing infinite 0.5s alternate ease-in-out;
-  top: 0;
-}
-
-body .contactUs p {
-  font-size: 1.1em;
-}
-
-body .contactUs button {
-  border: 2px solid black;
-  margin-top: 2em;
-  color: black;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-body .clients {
-  color: white;
-  padding: 3em 0;
-  position: relative;
-}
-
-body .clients::before {
-  width: 40%;
-  height: 2px;
-  background-color: white;
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: 0;
-}
-
-body .clients h1 {
-  font-size: 3em;
-  position: relative;
-  width: 25%;
-  margin-bottom: 1.4em;
-}
-
-body .clients h1::before {
-  width: 0.2%;
-  height: 100%;
-  right: 30%;
-  bottom: -12%;
-  background-color: white;
-  display: block;
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.61s ease-in-out;
-  transition: all 0.61s ease-in-out;
-  top: 0;
-  z-index: -4;
-}
-
-body .clients .clientCard {
+body main .contactDetails .contacts {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1.7fr 3fr 2fr;
-      grid-template-columns: 1.7fr 3fr 2fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+body main .contactDetails .contacts .contactCard {
+  color: white;
   width: 90%;
-  grid-column-gap: 1em;
-  margin: 1em auto 9em auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
+  margin: 1em auto;
 }
 
-body .clients .clientCard span {
-  padding: 1em 0em;
-  line-height: 1.1em;
-  width: 70%;
-  margin: 0.5em;
-  border-radius: 10px;
-  border: 2px solid white;
-  cursor: pointer;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+body main .contactDetails .contacts .contactCard .contactCardImg {
+  width: 6em;
+  height: 6em;
+  background: url("../assets/location.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 2em auto;
 }
 
-body .clients .clientCard span:hover {
-  background-color: white;
-  color: black;
+body main .contactDetails .contacts .contactCard h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+body main .contactDetails .contacts .contactCard p {
+  font-size: 1.3em;
+}
+
+body main .contactDetails .contacts .contactCard p a {
+  color: white;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(1) {
+  color: white;
+  width: 90%;
+  margin: 1em auto;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(1) .contactCardImg {
+  width: 6em;
+  height: 6em;
+  background: url("../assets/mail.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 2em auto;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(3) {
+  color: white;
+  width: 90%;
+  margin: 1em auto;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(3) .contactCardImg {
+  width: 6em;
+  height: 6em;
+  background: url("../assets/share(1).svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 2em auto;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(3) .socialLogos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(3) .socialLogos .socialImg {
+  width: 3em;
+  height: 3em;
+  background-position: cover;
+  background-size: contain;
+  margin: 1em auto;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(3) .socialLogos a:nth-child(2) {
+  width: 3em;
+  height: 3em;
+  background: url("../assets/twitterContact.png");
+  background-position: center;
+  background-size: cover;
+  margin: 1em auto;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(3) .socialLogos a:nth-child(1) {
+  width: 3em;
+  height: 3em;
+  background: url("../assets/instagramContact.svg");
+  background-position: center;
+  background-size: cover;
+  margin: 1em auto;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(3) .socialLogos a:nth-child(3) {
+  width: 3em;
+  height: 3em;
+  background: url("../assets/facebookContact.png");
+  background-position: center;
+  background-size: cover;
+  margin: 1em auto;
+}
+
+body main .contactDetails .contacts .contactCard:nth-child(3) .socialLogos a:nth-child(4) {
+  width: 3em;
+  height: 3em;
+  background: url("../assets/youtubeSVG.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1em auto;
 }
 
 body footer {
@@ -441,29 +424,18 @@ body footer p {
     position: absolute;
   }
   body main .showcase {
-    margin: 16vh 0vh 20vh 0;
+    display: block;
   }
-  body main .showcase::before {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0.3;
-    background-position-x: 110%;
+  body main .showcase .showcaseImg {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    padding: 2em;
   }
-  body main .showcase p {
-    width: 100%;
-  }
-  body main .who h1 {
-    width: 100%;
-    font-size: 3em;
-  }
-  body main .who p {
-    width: 90%;
-  }
-  body main .contactUs h1::before {
-    right: 10%;
-  }
-  body main .clients h1::before {
-    right: 10%;
+  body main .contactDetails .contacts {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
   body footer span {
     margin-bottom: 2em;
@@ -496,7 +468,11 @@ body footer p {
   body {
     overflow-y: auto;
     overflow-x: hidden;
+    position: relative;
     width: 100vw;
+  }
+  body .body {
+    overflow-x: hidden;
   }
   body header {
     position: fixed;
@@ -575,62 +551,27 @@ body footer p {
     position: absolute;
   }
   body main .showcase {
-    margin: 16vh 0vh 20vh 0;
-  }
-  body main .showcase h1 {
-    font-size: 3.2em;
-    margin-top: 3em;
-  }
-  body main .showcase::before {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0.3;
-    background-position-x: 110%;
-  }
-  body main .showcase p {
-    width: 80%;
-    font-size: 1.2em;
-  }
-  body main .who h1 {
-    width: 100%;
-    font-size: 2.4em;
-  }
-  body main .who p {
-    width: 90%;
-    font-size: 1.1em;
-  }
-  body main .contactUs {
-    padding: 35vh 0;
-  }
-  body main .contactUs h1 {
-    font-size: 1.6em;
-  }
-  body main .contactUs h1::before {
-    right: 10%;
-  }
-  body main .clients .clientCard {
-    display: block;
-    width: 100%;
-    -webkit-box-align: none;
-        -ms-flex-align: none;
-            align-items: none;
-    justify-items: none;
-    margin: 0;
-    border: none;
-    grid-column-gap: 0;
-    border: none;
-    text-align: left;
-  }
-  body main .clients .clientCard span {
-    border: none;
     display: block;
   }
-  body main .clients h1 {
-    font-size: 2.6em;
+  body main .showcase .showcaseText h1 {
+    font-size: 2.3em;
   }
-  body main .clients h1::before {
-    display: none;
-    right: 22%;
+  body main .showcase .showcaseText p {
+    width: 100%;
+    font-size: 1.3em;
+  }
+  body main .showcase .showcaseImg {
+    padding: 10vh;
+    opacity: 0.5;
+  }
+  body main .contactDetails .contacts {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body main .contactDetails .contacts .contactCard {
+    border-bottom: 1px solid white;
+    margin-bottom: 4em;
+    padding-bottom: 1em;
   }
   body footer span {
     margin-bottom: 2em;
@@ -675,12 +616,12 @@ body footer p {
     margin: 0em 0em 1em 0;
     display: block;
     padding: 0;
-    width: 100%;
+    width: 120%;
     background-color: white;
     -webkit-transform-origin: 0%;
             transform-origin: 0%;
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    -webkit-transform: rotate(46deg);
+            transform: rotate(46deg);
     -webkit-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
   }
@@ -692,9 +633,9 @@ body footer p {
     background-color: white;
     -webkit-transform-origin: 0%;
             transform-origin: 0%;
-    -webkit-transform: rotate(-40deg) translateY(27px) translateX(-24px);
-            transform: rotate(-40deg) translateY(27px) translateX(-24px);
-    width: 100%;
+    -webkit-transform: rotate(-47deg) translateY(27px) translateX(-24px);
+            transform: rotate(-47deg) translateY(27px) translateX(-24px);
+    width: 120%;
     -webkit-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
   }
@@ -747,4 +688,4 @@ body footer p {
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=contact.css.map */
